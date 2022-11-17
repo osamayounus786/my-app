@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,25 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+
+.logo{
+  width: 70px;
+  height: 70px;
+}
+.nav{
+display: flex;
+justify-content: space-between;
+}
+.nav-items{
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+  margin-right: 10px;
+  
+
+}
+.nav-items > li{
+  padding: 10px;
 }

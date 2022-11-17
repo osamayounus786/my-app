@@ -147,12 +147,18 @@
 
 // export default ReactDocumentation;
 import logo from './reactlogo.png'
+import './App.css'
 function Header(){
     return(
         <header>
-        <nav>
+        <nav className='nav'>
 
-        <img src={logo} alt="react logo"  />
+        <img className='logo' src={logo} alt="react logo"  />
+        <ul className='nav-items'>
+            <li> <a href="#">Pricing</a> </li>
+            <li> <a href="#">About</a> </li>
+            <li><a href="#">Help</a></li>
+        </ul>
         </nav>
         </header>
     )
