@@ -156,18 +156,24 @@ function Header(){
         </nav>
         </header>
     )
-    function MainContent(){
-        <>
-        <h1>Reason's I'm excited to learn React</h1>
-        <ol>
-            <li>It's a popular library so i will be fit in with the cool kids</li>
-            <li>I'm more likely to get a Developer job if know react</li>
-        </ol>
-        <footer>
-            <small>2022 Osama Younus</small>
-        </footer>
-        </>
-    }
+
+}
+function MainContent(){
+    return(
+    <div>
+
+    
+    <h1>Reason's I'm excited to learn React</h1>
+    <ol>
+        <li>It's a popular library so i will be fit in with the cool kids</li>
+        <li>I'm more likely to get a Developer job if know react</li>
+    </ol>
+    <footer>
+        <small>2022 Osama Younus</small>
+    </footer>
+    </div>
+    
+    )
 }
 function Page(){
     return(
