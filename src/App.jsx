@@ -146,49 +146,67 @@
 // }
 
 // export default ReactDocumentation;
-import logo from './reactlogo.png'
-import './App.css'
-function Header(){
-    return(
-        <header>
-        <nav className='nav'>
+// import logo from './reactlogo.png'
+// import './App.css'
+// function Header(){
+//     return(
+//         <header>
+//         <nav className='nav'>
 
-        <img className='logo' src={logo} alt="react logo"  />
-        <ul className='nav-items'>
-            <li> <a href="#">Pricing</a> </li>
-            <li> <a href="#">About</a> </li>
-            <li><a href="#">Help</a></li>
-        </ul>
-        </nav>
-        </header>
-    )
+//         <img className='logo' src={logo} alt="react logo"  />
+//         <ul className='nav-items'>
+//             <li> <a href="#">Pricing</a> </li>
+//             <li> <a href="#">About</a> </li>
+//             <li><a href="#">Help</a></li>
+//         </ul>
+//         </nav>
+//         </header>
+//     )
 
-}
-function MainContent(){
-    return(
-    <div>
+// }
+// function MainContent(){
+//     return(
+//     <div>
 
     
-    <h1>Reason's I'm excited to learn React</h1>
-    <ol>
-        <li>It's a popular library so i will be fit in with the cool kids</li>
-        <li>I'm more likely to get a Developer job if know react</li>
-    </ol>
-    <footer>
-        <small>2022 Osama Younus</small>
-    </footer>
-    </div>
+//     <h1>Reason's I'm excited to learn React</h1>
+//     <ol>
+//         <li>It's a popular library so i will be fit in with the cool kids</li>
+//         <li>I'm more likely to get a Developer job if know react</li>
+//     </ol>
+//     <footer>
+//         <small>2022 Osama Younus</small>
+//     </footer>
+//     </div>
     
-    )
-}
-function Page(){
-    return(
-        <div>
-          <Header />
-         <MainContent />
+//     )
+// }
+// function Page(){
+//     return(
+//         <div>
+//           <Header />
+//          <MainContent />
 
-        </div>
-    )
-}
+//         </div>
+//     )
+// }
 
-export default Page;
+// export default Page;
+import {Joke} from './components/jokes'
+function App(){
+ return(
+    <>
+    <Joke 
+          punchline= "gura mir na are"  />
+          <Joke setup= "Brazil a haar daata"
+          punchline= "7-1"  />
+        <Joke setup= "kai dema haare data "
+          punchline= "Germany e dema haare daata"  />
+          <Joke setup= "Fifa World cup a kae katti"
+          punchline= "Costa-Rica"  />
+          <Joke setup= "Tir kae daratkaga"
+          punchline= "Argentina e filhal"  />
+    </>
+ )
+}
+export default App;
