@@ -196,7 +196,7 @@ import {Joke} from './components/jokes'
 function App(){
  return(
     <>
-    <Joke 
+    <Joke setup= {false}
           punchline= "gura mir na are"  />
           <Joke setup= "Brazil a haar daata"
           punchline= "7-1"  />
