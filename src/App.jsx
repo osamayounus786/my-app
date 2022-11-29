@@ -192,33 +192,42 @@
 // }
 
 // export default Page;
+import {jokes} from './components/jokesdata'
 import {Joke} from './components/jokes'
 function App(){
-  const el = <h1>I am osama {3 + 1}</h1>
-  const color = [
-    <h3>red</h3> ,
-    <h3>blue</h3> ,
-    <h3>green</h3> ,
-    ]
+ 
+  // console.log(jokes)
+  const jokesElement = jokes.map(jk =>  <Joke setup={jk.setup} punchline={jk.punchline}/>
+  )
  return(
-
-    <>
-    
-
-    {color}
-    
-    {el}
-    <Joke setup= {false}
-          punchline= "gura mir na are"  />
-          <Joke setup= "Brazil a haar daata"
-          punchline= "7-1"  />
-        <Joke setup= "kai dema haare data "
-          punchline= "Germany e dema haare daata"  />
-          <Joke setup= "Fifa World cup a kae katti"
-          punchline= "Costa-Rica"  />
-          <Joke setup= "Tir kae daratkaga"
-          punchline= "Argentina e filhal"  />
-    </>
+  
+    <div>
+      {jokesElement}
+    </div>
  )
 }
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* <Joke setup= {false}
+      punchline= "gura mir na are"  />
+      <Joke setup= "Brazil a haar daata"
+      punchline= "7-1"  />
+    <Joke setup= "kai dema haare data "
+      punchline= "Germany e dema haare daata"  />
+      <Joke setup= "Fifa World cup a kae katti"
+      punchline= "Costa-Rica"  />
+      <Joke setup= "Tir kae daratkaga"
+      punchline= "Argentina e filhal"  /> */}
