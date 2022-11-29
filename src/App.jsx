@@ -194,8 +194,20 @@
 // export default Page;
 import {Joke} from './components/jokes'
 function App(){
+  const el = <h1>I am osama {3 + 1}</h1>
+  const color = [
+    <h3>red</h3> ,
+    <h3>blue</h3> ,
+    <h3>green</h3> ,
+    ]
  return(
+
     <>
+    
+
+    {color}
+    
+    {el}
     <Joke setup= {false}
           punchline= "gura mir na are"  />
           <Joke setup= "Brazil a haar daata"
