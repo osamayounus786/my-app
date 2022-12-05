@@ -192,21 +192,45 @@
 // }
 
 // export default Page;
-import {jokes} from './components/jokesdata'
-import {Joke} from './components/jokes'
-function App(){
+
+// import {jokes} from './components/jokesdata'
+// import {Joke} from './components/jokes'
+// function App(){
  
-  // console.log(jokes)
-  const jokesElement = jokes.map(jk =>  <Joke setup={jk.setup} punchline={jk.punchline}/>
-  )
- return(
+//   // console.log(jokes)
+//   const jokesElement = jokes.map(jk =>  <Joke setup={jk.setup} punchline={jk.punchline}/>
+//   )
+//  return(
   
-    <div>
-      {jokesElement}
-    </div>
- )
+//     <div>
+//       {jokesElement}
+//     </div>
+//  )
+// }
+// export default App;
+
+// import { useState } from "react";
+
+// function App(){
+//   const [count,setCount] = useState(0);
+//   return(
+//     <>
+//     <h1>{count}</h1>
+//     <button onClick={()=> setCount(count + 1)}>Add</button>
+//     <button onClick={()=> setCount(count - 1)}>Sub</button>
+//     </>
+//   )
+// }
+// export default App;
+
+
+function Date(){
+const date = new Date();
+const hours = date.getHours()
+console.log(hours);
 }
-export default App;
+
+export default Date;
 
 
 
@@ -215,13 +239,7 @@ export default App;
 
 
 
-
-
-
-
-
-
-{/* <Joke setup= {false}
+/* <Joke setup= {false}
       punchline= "gura mir na are"  />
       <Joke setup= "Brazil a haar daata"
       punchline= "7-1"  />
@@ -230,4 +248,4 @@ export default App;
       <Joke setup= "Fifa World cup a kae katti"
       punchline= "Costa-Rica"  />
       <Joke setup= "Tir kae daratkaga"
-      punchline= "Argentina e filhal"  /> */}
+      punchline= "Argentina e filhal"  /> */
