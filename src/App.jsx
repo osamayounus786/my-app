@@ -247,17 +247,32 @@
 
 
 
-  import {useState} from "react";
-  import Count from './components/count'
-      function Counter(){
-       const  [count,setCount] = useState(0);
-          return(
-            <>
-            <Count number = {count}/>
-            <button onClick={()=> setCount(count - 1)}>-</button>
-            <button onClick={()=> setCount(count + 1)}>+</button>
-            <button onClick={()=> setCount(0)}>Clear</button>
-            </>
-          )
-      }
-      export default Counter;
+  // import {useState} from "react";
+  // import Count from './components/count'
+  //     function Counter(){
+  //      const  [count,setCount] = useState(0);
+  //         return(
+  //           <>
+  //           <Count number = {count}/>
+  //           <button onClick={()=> setCount(count - 1)}>-</button>
+  //           <button onClick={()=> setCount(count + 1)}>+</button>
+  //           <button onClick={()=> setCount(0)}>Clear</button>
+  //           </>
+  //         )
+  //     }
+  //     export default Counter;
+
+
+  function App(){
+    return(
+      <>
+      <main>
+        <h1>
+          Box will go here
+        </h1>
+      </main>
+      </>
+    )
+  }
+
+  export default App;
