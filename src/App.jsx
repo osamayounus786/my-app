@@ -262,14 +262,29 @@
   //     }
   //     export default Counter;
 
-
+import './App.css'
+import { useState } from 'react'
+import boxes from './components/boxes'
+import Box from './components/Box'
   function App(){
+
+    const [squares,setSquares] = useState(boxes);
+
+    
+    
+    const squareElements = squares.map(square=>(
+      <Box key = {square.id} on={square.on} />
+        
+      
+    ))
+    
+
+
+
     return(
       <>
       <main>
-        <h1>
-          Box will go here
-        </h1>
+       {squareElements}
       </main>
       </>
     )
