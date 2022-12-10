@@ -336,4 +336,5 @@
 
 
 
-
+//props with card
+// if you have multiple cards and want to render in single component 
