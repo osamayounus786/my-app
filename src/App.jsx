@@ -309,3 +309,31 @@
 
 
   // revision of props
+// import Component from './components/propsrev'
+// import {data} from './components/datarev'
+//   function App(){
+    
+//     const arrayData = data.map(newArray => <Component name={newArray.name} fName ={newArray.fName} age={newArray.age} />)
+//     // const carInfo = { name: "Ford", model: "Mustang" };
+//     return(
+//       <>
+//       <h1>
+//         Hello props
+//       </h1>
+
+//       {arrayData}
+      
+
+      
+//       {/* <Data brand = {carInfo}/> */}
+//       </>
+//     )
+//   }
+
+//   export default App;
+
+
+
+
+
+
