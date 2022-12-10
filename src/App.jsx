@@ -44,6 +44,8 @@
 //         </ul>
 //       </p>
 
+import Card from "./components/datas";
+
 //       <h1>What is MPA?</h1>
 //       <p>
 //         <ul>
@@ -338,3 +340,23 @@
 
 //props with card
 // if you have multiple cards and want to render in single component 
+// import Data from "./components/datas";
+// import './App.css'
+
+// function App(){
+//   return(
+//     <>
+//    <Data img = "https://cdn.pixabay.com/photo/2017/02/09/21/08/wings-2053515__340.png"
+//         type= "Sticker"
+//         price= "RS 50 Dollars"/>
+//         <Data img = "https://cdn.pixabay.com/photo/2017/02/09/21/08/wings-2053515__340.png"
+//         type= "Nutmeg"
+//         price= "RS 70 Dollars"/>
+//     </>
+//   )
+// }
+
+// export default App;
+
+// Jokes
+
