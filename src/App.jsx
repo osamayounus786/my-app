@@ -44,7 +44,7 @@
 //         </ul>
 //       </p>
 
-import Card from "./components/datas";
+// import Card from "./components/datas";
 
 //       <h1>What is MPA?</h1>
 //       <p>
@@ -359,4 +359,29 @@ import Card from "./components/datas";
 // export default App;
 
 // Jokes
+// import {jokes} from './components/jokesdata'
+// import Jokes from './components/jokes'
+// function App(){
+//   const jokesELement = jokes.map(jk =>
+//      <Jokes 
+//      setup={jk.setup}
+//       punchline={jk.punchline}
+//       />)
+//   return(
+//     <>
+//     {jokesELement}
+//     </>
+//   )
+// }
+// export default App;
 
+import Card from './components/card'
+function App(){
+  return(
+    <>
+    <h1>Props with condoitional rederning</h1>
+    <Card />
+    </>
+  )
+}
+export default App;
