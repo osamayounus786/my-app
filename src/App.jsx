@@ -44,6 +44,8 @@
 //         </ul>
 //       </p>
 
+// import { useState } from "react";
+
 // import Card from "./components/datas";
 
 //       <h1>What is MPA?</h1>
@@ -406,3 +408,24 @@
 //   )
 // }
 // export default App;
+
+
+import { useState } from "react";
+import {data} from './components/memedata'
+function App(){
+  const [memeImg, setmemeImg] = useState("");
+
+  function getImageUrl(){
+
+    let randomImg = Math.floor(Math.random()*data.length);
+    setmemeImg(data[randomImg].url)
+    
+  }
+  return(
+    <>
+      <button onClick={getImageUrl}>Generate Random Meme Image</button>
+      <img src={memeImg} alt="" />
+    </>
+  )
+}
+export default App;
