@@ -376,11 +376,13 @@
 // export default App;
 
 import Card from './components/card'
+import {data} from './components/carddata'
 function App(){
+  const renderData = data.map(cData=> <Card  {...cData} key={cData.id}/>)
   return(
     <>
-    <h1>Props with condoitional rederning</h1>
-    <Card />
+    
+    {renderData}
     </>
   )
 }
