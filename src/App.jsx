@@ -375,14 +375,24 @@
 // }
 // export default App;
 
-import Card from './components/card'
-import {data} from './components/carddata'
+// import Card from './components/card'
+// import {data} from './components/carddata'
+// function App(){
+//   const renderData = data.map(cData=> <Card  {...cData} key={cData.id}/>)
+//   return(
+//     <>
+    
+//     {renderData}
+//     </>
+//   )
+// }
+// export default App;
+
+
 function App(){
-  const renderData = data.map(cData=> <Card  {...cData} key={cData.id}/>)
   return(
     <>
-    
-    {renderData}
+    <h1>Count</h1>
     </>
   )
 }
