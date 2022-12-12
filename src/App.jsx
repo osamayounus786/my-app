@@ -388,15 +388,21 @@
 // }
 // export default App;
 
-import { useState } from "react";
-function App(){
-  const [count, setCount] = useState(0)
-  return(
-    <>
-    <h1>{count}</h1>
-    <button onClick={()=> setCount(count-1)}>-</button>
-    <button onClick={()=> setCount(count+1)}>+</button>
-    </>
-  )
-}
-export default App;
+// import { useState } from "react";
+// function App(){
+//   const [count, setCount] = useState(0)
+//   // function add(){
+//   //   setCount(oldValue => oldValue + 1)
+//   // }
+//   // function sub(){
+//   //   setCount(oldValue => oldValue - 1)
+//   // }
+//   return(
+//     <>
+//     <h1>{count}</h1>
+//     <button onClick={()=>setCount(oldValue => oldValue - 1)}>-</button>
+//     <button onClick={()=>setCount(oldValue => oldValue + 1)}>+</button>
+//     </>
+//   )
+// }
+// export default App;
