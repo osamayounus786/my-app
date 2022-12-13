@@ -32,12 +32,19 @@
 
 
 
-
+import { useState } from "react";
 function Jokes(props){
+    const [isShown, setisShown] = useState(false);
+    
+    function toggle(){
+        setisShown((prevIsshown)=> !prevIsshown)
+        
+    }
     return(
         <>
         {props.setup &&<h3>Setup:{props.setup}</h3>}
-        <h3>Punchline:{props.punchline}</h3>
+        {isShown &&<h3>Punchline:{props.punchline}</h3>}
+        <button onClick={toggle}>{isShown ? "Hide" : "Show"} Punchline</button>
         </>
     )
 }

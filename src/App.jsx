@@ -44,6 +44,8 @@
 //         </ul>
 //       </p>
 
+// const { useState } = require("react");
+
 // import { useState } from "react";
 
 // import Card from "./components/datas";
@@ -464,3 +466,23 @@
 
 
 //conditional rendering 
+
+
+
+import  { useState }  from "react";
+
+function App(){
+  const [messages, setMessages] = useState(['a','b'])
+  
+  return(
+    <>
+    {
+      messages.length === 0 ?
+      <h1>You are all caught up</h1> :
+      <h1>you have {messages.length} unread {messages.length > 1 ? "messages" :"message"} </h1>
+    }
+    </>
+  )
+}
+
+export default App;

@@ -1,7 +1,7 @@
 export const jokes = [
     {
         id: 1,
-        setup: "",
+        setup: "Brazil a chicho wart",
         punchline: "7-1"
     },
     {
