@@ -1,4 +1,4 @@
-/* *{
+ *{
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -33,7 +33,7 @@ justify-content: space-between;
   display: inline-block;
   margin-right: 4px;
   border-radius: 5px;
-} */
+} 
 
 .card-img{
   height: 100%;
