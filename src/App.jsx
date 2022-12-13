@@ -295,20 +295,28 @@
       
 //     ))
     
+//     return(
+//       <>
+//       <main>
+//        {squareElements}
+//       </main>
+//       </>
+//     )
+//   }
+
+//   export default App;
 
 
 
-  //   return(
-  //     <>
-  //     <main>
-  //      {squareElements}
-  //     </main>
-  //     </>
-  //   )
-  // }
 
-  // export default App;
 
+
+
+  //Box challenge revision
+ import './App.css'
+ import { useState } from 'react'
+ import boxes from './components/boxes'
+ import Box from './components/Box'
 
 
 
@@ -410,22 +418,22 @@
 // export default App;
 
 
-import { useState } from "react";
-import {data} from './components/memedata'
-function App(){
-  const [memeImg, setmemeImg] = useState("");
+// import { useState } from "react";
+// import {data} from './components/memedata'
+// function App(){
+//   const [memeImg, setmemeImg] = useState("");
 
-  function getImageUrl(){
+//   function getImageUrl(){
 
-    let randomImg = Math.floor(Math.random()*data.length);
-    setmemeImg(data[randomImg].url)
+//     let randomImg = Math.floor(Math.random()*data.length);
+//     setmemeImg(data[randomImg].url)
     
-  }
-  return(
-    <>
-      <button onClick={getImageUrl}>Generate Random Meme Image</button>
-      <img src={memeImg} alt="" />
-    </>
-  )
-}
-export default App;
+//   }
+//   return(
+//     <>
+//       <button onClick={getImageUrl}>Generate Random Meme Image</button>
+//       <img src={memeImg} alt="" />
+//     </>
+//   )
+// }
+// export default App;
