@@ -313,13 +313,34 @@
 
 
   //Box challenge revision
- import './App.css'
- import { useState } from 'react'
- import boxes from './components/boxes'
- import Box from './components/Box'
+//  import './App.css'
+//  import { useState } from 'react'
+//  import boxes from './components/boxes'
+//  import Box from './components/Box'
+
+// function App(){
+//   const [squares, setSquare] = useState(boxes);
+
+//   function toggle(){
+//     console.log("clicked")
+//   }
+ 
+//   const squareElements = squares.map((square) =>(
+//     <Box 
+//     key={square.id}
+//     on={square.on}
+//     toggle={toggle}
+//       />
+//   ))
 
 
-
+//   return(
+//   <main>
+//     {squareElements}
+//   </main>
+//   )
+// }
+// export default App;
   // revision of props
 // import Component from './components/propsrev'
 // import {data} from './components/datarev'
@@ -437,3 +458,8 @@
 //   )
 // }
 // export default App;
+
+
+
+
+
