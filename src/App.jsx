@@ -492,3 +492,30 @@
 
 
 //from
+import { useState } from "react";
+function Form(){
+  const[fristName, setFirstName] = useState("")
+  const[lastName, setLastName] = useState("")
+
+
+  console.log(fristName, lastName)
+  
+  function handleClickFirstName(event){
+    setFirstName(event.target.value);
+  }
+  function handleClickLastName(event){
+    setLastName(event.target.value);
+  }
+  return(
+    <form>
+      <input type="text" placeholder="First Name" 
+      onChange = {handleClickFirstName}/>
+      <input type="text" placeholder="Last Name" 
+      onChange = {handleClickLastName}/>
+
+      
+    </form>
+  )
+}
+
+export default Form;
