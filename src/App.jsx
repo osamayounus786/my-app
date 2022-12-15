@@ -501,10 +501,10 @@ function Form(){
     email: "",
     textArea: "",
     isFriendly: true,
-    employment: ""
+    employment: "",
+    favColor: ""
   })
-  
-  console.log(formData.employment)
+
   
   
   function handleClick(event){
@@ -518,8 +518,13 @@ function Form(){
   }
 
 
+  function handleSubmit(event){
+    event.preventDefault()
+    console.log(formData)
+  }
+
   return(
-    <form>
+    <form onSubmit={handleSubmit}>
       <input type="text" placeholder="First Name" 
       name="firstName"
       onChange = {handleClick}
@@ -593,7 +598,23 @@ function Form(){
        <br />
 
        <label htmlFor="favColor">What is your favourite color</label>
-        
+        <select
+         id="favColor"
+         name="favColor"
+         value={formData.favColor}
+         onChange={handleClick}
+         >
+          <option value="">Choose Color</option>
+          <option value="red">Red</option>
+          <option value="orange">Orange</option>
+          <option value="blue">Blue</option>
+          <option value="indigo">Indigo</option>
+          <option value="violet">Violet</option>
+          <option value="green">Green</option>
+          <option value="yellow">Yellow</option>
+        </select>
+
+        <button>Submit</button>
       
     </form>
   )
