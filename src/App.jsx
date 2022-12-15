@@ -494,24 +494,51 @@
 //from
 import { useState } from "react";
 function Form(){
-  const[fristName, setFirstName] = useState("")
-  const[lastName, setLastName] = useState("")
 
-
-  console.log(fristName, lastName)
+  const[formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    textArea: ""
+  })
   
-  function handleClickFirstName(event){
-    setFirstName(event.target.value);
-  }
-  function handleClickLastName(event){
-    setLastName(event.target.value);
+  console.log(formData)
+  
+  
+  function handleClick(event){
+      setFormData(prevFormData => {
+        return {
+          ...prevFormData,
+          [event.target.name]: event.target.value
+        }
+      })
   }
   return(
     <form>
       <input type="text" placeholder="First Name" 
-      onChange = {handleClickFirstName}/>
+      name="firstName"
+      onChange = {handleClick}
+      value={formData.firstName}
+      />
+
       <input type="text" placeholder="Last Name" 
-      onChange = {handleClickLastName}/>
+      name="lastName"
+      onChange = {handleClick}
+      value={formData.lastName}
+      />
+
+      <input type="email" placeholder="Email" 
+      name="email"
+      onChange = {handleClick}
+      value={formData.email}
+      />
+
+      <textarea 
+       onChange = {handleClick}
+       name="textArea"
+       value={formData.textArea}
+       placeholder="comments"
+       />
 
       
     </form>
