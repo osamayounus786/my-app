@@ -540,6 +540,8 @@ function Form(){
        placeholder="comments"
        />
 
+       {/* form checkboxes */}
+
       
     </form>
   )
