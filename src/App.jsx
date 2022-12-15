@@ -499,20 +499,25 @@ function Form(){
     firstName: "",
     lastName: "",
     email: "",
-    textArea: ""
+    textArea: "",
+    isFriendly: true,
+    employment: ""
   })
   
-  console.log(formData)
+  console.log(formData.employment)
   
   
   function handleClick(event){
       setFormData(prevFormData => {
+        const {name, value, type, checked} = event.target
         return {
           ...prevFormData,
-          [event.target.name]: event.target.value
+          [name]: type === "checkbox" ? checked : value
         }
       })
   }
+
+
   return(
     <form>
       <input type="text" placeholder="First Name" 
@@ -542,6 +547,53 @@ function Form(){
 
        {/* form checkboxes */}
 
+       <input type="checkbox"
+        id="isFriendly"
+        checked={formData.isFriendly}
+        onChange={handleClick}
+        name="isFriendly"
+        />
+       <label htmlFor="isFriendly">Are you friendly?</label>
+
+       <br />
+
+       <fieldset>
+        <legend>Current Employment Status</legend>
+        <input type="radio" 
+               id="unemployed"
+               name="employment"
+               value="unemployed"
+               checked={formData.employment === "unemployed"}
+               onChange={handleClick}
+        />
+        <label htmlFor="unemployed">Unemployed</label>
+        <br />
+
+        <input type="radio" 
+               id="part-time"
+               name="employment"
+               value="Part-Time"
+               checked={formData.employment === "Part-Time"}
+               onChange={handleClick}
+        />
+        <label htmlFor="part-time">Part-Time</label>
+        <br />
+        <input type="radio" 
+               id="full-time"
+               name="employment"
+               value="Full-Time"
+               checked={formData.employment === "Full-Time"}
+               onChange={handleClick}
+        />
+        <label htmlFor="full-time">Full-Time</label>
+        <br />
+
+       </fieldset>
+       <br />
+       <br />
+
+       <label htmlFor="favColor">What is your favourite color</label>
+        
       
     </form>
   )
