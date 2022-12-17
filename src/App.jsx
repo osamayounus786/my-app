@@ -657,6 +657,7 @@
     }
     if(form.isJoin){
         console.log("thanks for news letter")
+        return
     }
   }
 
