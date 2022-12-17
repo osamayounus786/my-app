@@ -492,23 +492,153 @@
 
 
 //from
-import { useState } from "react";
-function Form(){
+// import { useState } from "react";
+// function Form(){
 
-  const[formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+//   const[formData, setFormData] = useState({
+//     firstName: "",
+//     lastName: "",
+//     email: "",
+//     textArea: "",
+//     isFriendly: true,
+//     employment: "",
+//     favColor: ""
+//   })
+
+  
+  
+//   function handleClick(event){
+//       setFormData(prevFormData => {
+//         const {name, value, type, checked} = event.target
+//         return {
+//           ...prevFormData,
+//           [name]: type === "checkbox" ? checked : value
+//         }
+//       })
+//   }
+
+
+//   function handleSubmit(event){
+//     event.preventDefault()
+//     console.log(formData)
+//   }
+
+//   return(
+//     <form onSubmit={handleSubmit}>
+//       <input type="text" placeholder="First Name" 
+//       name="firstName"
+//       onChange = {handleClick}
+//       value={formData.firstName}
+//       />
+
+//       <input type="text" placeholder="Last Name" 
+//       name="lastName"
+//       onChange = {handleClick}
+//       value={formData.lastName}
+//       />
+
+//       <input type="email" placeholder="Email" 
+//       name="email"
+//       onChange = {handleClick}
+//       value={formData.email}
+//       />
+
+//       <textarea 
+//        onChange = {handleClick}
+//        name="textArea"
+//        value={formData.textArea}
+//        placeholder="comments"
+//        />
+
+//        {/* form checkboxes */}
+
+//        <input type="checkbox"
+//         id="isFriendly"
+//         checked={formData.isFriendly}
+//         onChange={handleClick}
+//         name="isFriendly"
+//         />
+//        <label htmlFor="isFriendly">Are you friendly?</label>
+
+//        <br />
+
+//        <fieldset>
+//         <legend>Current Employment Status</legend>
+//         <input type="radio" 
+//                id="unemployed"
+//                name="employment"
+//                value="unemployed"
+//                checked={formData.employment === "unemployed"}
+//                onChange={handleClick}
+//         />
+//         <label htmlFor="unemployed">Unemployed</label>
+//         <br />
+
+//         <input type="radio" 
+//                id="part-time"
+//                name="employment"
+//                value="Part-Time"
+//                checked={formData.employment === "Part-Time"}
+//                onChange={handleClick}
+//         />
+//         <label htmlFor="part-time">Part-Time</label>
+//         <br />
+//         <input type="radio" 
+//                id="full-time"
+//                name="employment"
+//                value="Full-Time"
+//                checked={formData.employment === "Full-Time"}
+//                onChange={handleClick}
+//         />
+//         <label htmlFor="full-time">Full-Time</label>
+//         <br />
+
+//        </fieldset>
+//        <br />
+//        <br />
+
+//        <label htmlFor="favColor">What is your favourite color</label>
+//         <select
+//          id="favColor"
+//          name="favColor"
+//          value={formData.favColor}
+//          onChange={handleClick}
+//          >
+//           <option value="">Choose Color</option>
+//           <option value="red">Red</option>
+//           <option value="orange">Orange</option>
+//           <option value="blue">Blue</option>
+//           <option value="indigo">Indigo</option>
+//           <option value="violet">Violet</option>
+//           <option value="green">Green</option>
+//           <option value="yellow">Yellow</option>
+//         </select>
+
+//         <button>Submit</button>
+      
+//     </form>
+//   )
+// }
+
+// export default Form;
+
+
+
+// form challenge 
+ import { useState } from "react";
+
+ function Form(){
+
+  const [form, setForm] = useState({
     email: "",
-    textArea: "",
-    isFriendly: true,
-    employment: "",
-    favColor: ""
+    password: "",
+    confirmPassword: "",
+    isJoin: false
   })
 
-  
-  
+
   function handleClick(event){
-      setFormData(prevFormData => {
+      setForm(prevFormData => {
         const {name, value, type, checked} = event.target
         return {
           ...prevFormData,
@@ -517,107 +647,63 @@ function Form(){
       })
   }
 
-
-  function handleSubmit(event){
+    function handleSubmit(event){
     event.preventDefault()
-    console.log(formData)
+    if(form.password === form.confirmPassword){
+        console.log("Successfully signed up")
+    }
+    else{
+      console.log("password did'not match")
+    }
+    if(form.isJoin){
+        console.log("thanks for news letter")
+    }
   }
 
   return(
-    <form onSubmit={handleSubmit}>
-      <input type="text" placeholder="First Name" 
-      name="firstName"
-      onChange = {handleClick}
-      value={formData.firstName}
-      />
-
-      <input type="text" placeholder="Last Name" 
-      name="lastName"
-      onChange = {handleClick}
-      value={formData.lastName}
-      />
-
-      <input type="email" placeholder="Email" 
-      name="email"
-      onChange = {handleClick}
-      value={formData.email}
-      />
-
-      <textarea 
-       onChange = {handleClick}
-       name="textArea"
-       value={formData.textArea}
-       placeholder="comments"
-       />
-
-       {/* form checkboxes */}
-
-       <input type="checkbox"
-        id="isFriendly"
-        checked={formData.isFriendly}
-        onChange={handleClick}
-        name="isFriendly"
-        />
-       <label htmlFor="isFriendly">Are you friendly?</label>
-
-       <br />
-
-       <fieldset>
-        <legend>Current Employment Status</legend>
-        <input type="radio" 
-               id="unemployed"
-               name="employment"
-               value="unemployed"
-               checked={formData.employment === "unemployed"}
-               onChange={handleClick}
-        />
-        <label htmlFor="unemployed">Unemployed</label>
-        <br />
-
-        <input type="radio" 
-               id="part-time"
-               name="employment"
-               value="Part-Time"
-               checked={formData.employment === "Part-Time"}
-               onChange={handleClick}
-        />
-        <label htmlFor="part-time">Part-Time</label>
-        <br />
-        <input type="radio" 
-               id="full-time"
-               name="employment"
-               value="Full-Time"
-               checked={formData.employment === "Full-Time"}
-               onChange={handleClick}
-        />
-        <label htmlFor="full-time">Full-Time</label>
-        <br />
-
-       </fieldset>
-       <br />
-       <br />
-
-       <label htmlFor="favColor">What is your favourite color</label>
-        <select
-         id="favColor"
-         name="favColor"
-         value={formData.favColor}
-         onChange={handleClick}
-         >
-          <option value="">Choose Color</option>
-          <option value="red">Red</option>
-          <option value="orange">Orange</option>
-          <option value="blue">Blue</option>
-          <option value="indigo">Indigo</option>
-          <option value="violet">Violet</option>
-          <option value="green">Green</option>
-          <option value="yellow">Yellow</option>
-        </select>
-
-        <button>Submit</button>
+      <div>
+          <form onSubmit={handleSubmit}>
       
-    </form>
-  )
-}
+      <input 
+       type="email"
+       placeholder="Email"
+       name="email"
+       onChange={handleClick}
+       value={form.email}
+       />
+      <br />
 
-export default Form;
+      <input 
+      type="password"
+      placeholder="Password"
+      name="password"
+      onChange={handleClick}
+      value={form.password}
+      />
+      <br />
+
+      <input 
+      type="password"
+      placeholder="Confirm Password"
+      name="confirmPassword" 
+      onChange={handleClick}
+      value={form.confirmPassword}
+       />
+      <br />
+
+      <input
+      type="checkbox"
+      id="checkbox"
+      name="isJoin"
+      onChange={handleClick}
+      checked={form.isJoin}
+      />
+      <label htmlFor="checkbox">I want to join the news letter</label>
+      <br />
+
+      <button>Sign up</button>
+          </form>
+      </div>
+  )
+ }
+ export default Form;
