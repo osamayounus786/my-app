@@ -625,86 +625,88 @@
 
 
 // form challenge 
- import { useState } from "react";
+//  import { useState } from "react";
 
- function Form(){
+//  function Form(){
 
-  const [form, setForm] = useState({
-    email: "",
-    password: "",
-    confirmPassword: "",
-    isJoin: false
-  })
+//   const [form, setForm] = useState({
+//     email: "",
+//     password: "",
+//     confirmPassword: "",
+//     isJoin: false
+//   })
 
 
-  function handleClick(event){
-      setForm(prevFormData => {
-        const {name, value, type, checked} = event.target
-        return {
-          ...prevFormData,
-          [name]: type === "checkbox" ? checked : value
-        }
-      })
-  }
+//   function handleClick(event){
+//       setForm(prevFormData => {
+//         const {name, value, type, checked} = event.target
+//         return {
+//           ...prevFormData,
+//           [name]: type === "checkbox" ? checked : value
+//         }
+//       })
+//   }
 
-    function handleSubmit(event){
-    event.preventDefault()
-    if(form.password === form.confirmPassword){
-        console.log("Successfully signed up")
-    }
-    else{
-      console.log("password did'not match")
-    }
-    if(form.isJoin){
-        console.log("thanks for news letter")
-        return
-    }
-  }
+//     function handleSubmit(event){
+//     event.preventDefault()
+//     if(form.password === form.confirmPassword){
+//         console.log("Successfully signed up")
+//     }
+//     else{
+//       console.log("password did'not match")
+//     }
+//     if(form.isJoin){
+//         console.log("thanks for news letter")
+//         return
+//     }
+//   }
 
-  return(
-      <div>
-          <form onSubmit={handleSubmit}>
+//   return(
+//       <div>
+//           <form onSubmit={handleSubmit}>
       
-      <input 
-       type="email"
-       placeholder="Email"
-       name="email"
-       onChange={handleClick}
-       value={form.email}
-       />
-      <br />
+//       <input 
+//        type="email"
+//        placeholder="Email"
+//        name="email"
+//        onChange={handleClick}
+//        value={form.email}
+//        />
+//       <br />
 
-      <input 
-      type="password"
-      placeholder="Password"
-      name="password"
-      onChange={handleClick}
-      value={form.password}
-      />
-      <br />
+//       <input 
+//       type="password"
+//       placeholder="Password"
+//       name="password"
+//       onChange={handleClick}
+//       value={form.password}
+//       />
+//       <br />
 
-      <input 
-      type="password"
-      placeholder="Confirm Password"
-      name="confirmPassword" 
-      onChange={handleClick}
-      value={form.confirmPassword}
-       />
-      <br />
+//       <input 
+//       type="password"
+//       placeholder="Confirm Password"
+//       name="confirmPassword" 
+//       onChange={handleClick}
+//       value={form.confirmPassword}
+//        />
+//       <br />
 
-      <input
-      type="checkbox"
-      id="checkbox"
-      name="isJoin"
-      onChange={handleClick}
-      checked={form.isJoin}
-      />
-      <label htmlFor="checkbox">I want to join the news letter</label>
-      <br />
+//       <input
+//       type="checkbox"
+//       id="checkbox"
+//       name="isJoin"
+//       onChange={handleClick}
+//       checked={form.isJoin}
+//       />
+//       <label htmlFor="checkbox">I want to join the news letter</label>
+//       <br />
 
-      <button>Sign up</button>
-          </form>
-      </div>
-  )
- }
- export default Form;
+//       <button>Sign up</button>
+//           </form>
+//       </div>
+//   )
+//  }
+//  export default Form;
+
+// use effect
