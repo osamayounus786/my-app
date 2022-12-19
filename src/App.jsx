@@ -710,3 +710,29 @@
 //  export default Form;
 
 // use effect
+import { useState, useEffect } from "react";
+
+function App(){
+const [count, setCount] = useState(0)
+
+console.log("component rendered")
+
+
+useEffect(function(){
+  console.log("useEffect render")
+}, []
+)
+
+
+function addCount(){
+  setCount(prevCount => prevCount + 1)
+}
+  return(
+    <>
+    <h1>Count: {count}</h1>
+    <button  onClick={addCount}>Add</button>
+    </>
+  )
+}
+
+export default App;
