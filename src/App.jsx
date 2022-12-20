@@ -720,7 +720,7 @@ console.log("component rendered")
 
 useEffect(function(){
   console.log("useEffect render")
-}, []
+}, [count]
 )
 
 
