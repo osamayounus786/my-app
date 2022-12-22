@@ -738,20 +738,31 @@
 // export default App;
 
 import { useState } from "react";
-
+import './App.css';
 
 
 
 function App(){
+  const green = 'green';
+ const [bg, setBg] = useState(green)
 
   function handleBtn(){
-  console.log("Clicked")
+  const newBg = 'blue';
+  setBg(newBg)
+  // console.log('1')
+  
+  
   }
 
 
   return(
     <>
+    <div 
+    style={ {backgroundColor: bg} }
+    className="bgColor">
+
     <button onClick={handleBtn}>Click Me</button>
+    </div>
     </>
   )
 }
