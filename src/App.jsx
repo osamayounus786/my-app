@@ -710,27 +710,48 @@
 //  export default Form;
 
 // use effect
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
+
+// function App(){
+// const [count, setCount] = useState(0)
+
+// console.log("component rendered")
+
+
+// useEffect(function(){
+//   console.log("useEffect render")
+// }, [count]
+// )
+
+
+// function addCount(){
+//   setCount(prevCount => prevCount + 1)
+// }
+//   return(
+//     <>
+//     <h1>Count: {count}</h1>
+//     <button  onClick={addCount}>Add</button>
+//     </>
+//   )
+// }
+
+// export default App;
+
+import { useState } from "react";
+
+
+
 
 function App(){
-const [count, setCount] = useState(0)
 
-console.log("component rendered")
-
-
-useEffect(function(){
-  console.log("useEffect render")
-}, [count]
-)
+  function handleBtn(){
+  console.log("Clicked")
+  }
 
 
-function addCount(){
-  setCount(prevCount => prevCount + 1)
-}
   return(
     <>
-    <h1>Count: {count}</h1>
-    <button  onClick={addCount}>Add</button>
+    <button onClick={handleBtn}>Click Me</button>
     </>
   )
 }
