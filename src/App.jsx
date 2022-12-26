@@ -738,6 +738,8 @@
 // export default App;
 
 import { useState } from "react";
+import AccessTimeFilledSharpIcon from '@mui/icons-material/AccessTimeFilledSharp';
+import HomeIcon from '@mui/icons-material/Home';
 import './App.css';
 
 
@@ -762,6 +764,8 @@ function App(){
     className="bgColor">
 
     <button onClick={handleBtn}>Click Me</button>
+    <AccessTimeFilledSharpIcon />
+    <HomeIcon />
     </div>
     </>
   )
