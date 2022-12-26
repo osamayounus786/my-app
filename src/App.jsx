@@ -740,6 +740,7 @@
 import { useState } from "react";
 import AccessTimeFilledSharpIcon from '@mui/icons-material/AccessTimeFilledSharp';
 import HomeIcon from '@mui/icons-material/Home';
+import Button from '@mui/material/Button';
 import './App.css';
 
 
@@ -766,6 +767,9 @@ function App(){
     <button onClick={handleBtn}>Click Me</button>
     <AccessTimeFilledSharpIcon />
     <HomeIcon />
+    <Button variant="outlined">
+      Hello Motu
+    </Button>
     </div>
     </>
   )
