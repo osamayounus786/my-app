@@ -737,42 +737,44 @@
 
 // export default App;
 
-import { useState } from "react";
-import AccessTimeFilledSharpIcon from '@mui/icons-material/AccessTimeFilledSharp';
-import HomeIcon from '@mui/icons-material/Home';
-import Button from '@mui/material/Button';
-import './App.css';
+// import { useState } from "react";
+// import AccessTimeFilledSharpIcon from '@mui/icons-material/AccessTimeFilledSharp';
+// import HomeIcon from '@mui/icons-material/Home';
+// import Button from '@mui/material/Button';
+// import './App.css';
 
 
 
-function App(){
-  const green = 'green';
- const [bg, setBg] = useState(green)
+// function App(){
+//   const green = 'green';
+//  const [bg, setBg] = useState(green)
 
-  function handleBtn(){
-  const newBg = 'blue';
-  setBg(newBg)
-  // console.log('1')
+//   function handleBtn(){
+//   const newBg = 'blue';
+//   setBg(newBg)
+//   // console.log('1')
   
   
-  }
+//   }
 
 
-  return(
-    <>
-    <div 
-    style={ {backgroundColor: bg} }
-    className="bgColor">
+//   return(
+//     <>
+//     <div 
+//     style={ {backgroundColor: bg} }
+//     className="bgColor">
 
-    <button onClick={handleBtn}>Click Me</button>
-    <AccessTimeFilledSharpIcon />
-    <HomeIcon />
-    <Button variant="outlined">
-      Hello Motu
-    </Button>
-    </div>
-    </>
-  )
-}
+//     <button onClick={handleBtn}>Click Me</button>
+//     <AccessTimeFilledSharpIcon />
+//     <HomeIcon />
+//     <Button variant="outlined">
+//       Hello Motu
+//     </Button>
+//     </div>
+//     </>
+//   )
+// }
 
-export default App;
+// export default App;
+
+// context api initial
