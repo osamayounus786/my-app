@@ -44,6 +44,8 @@
 //         </ul>
 //       </p>
 
+
+
 // const { useState } = require("react");
 
 // import { useState } from "react";
@@ -778,3 +780,16 @@
 // export default App;
 
 // context api initial
+
+
+import ComA from './components/ComA'
+
+ function App(){
+  return(
+    <>
+    <ComA />
+    </>
+  )
+ }
+
+ export default App;
