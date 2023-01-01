@@ -782,16 +782,27 @@
 // context api initial
 
 
-import ComA from './components/ComA'
+// import ComA from './components/ComA'
 
+//  function App(){
+//   return(
+//     <>
+//     <ComA />
+//     </>
+//   )
+//  }
+
+//  export default App;
+
+ //rest api axios api
+
+
+import Axios from "./components/Axios";
  function App(){
   return(
     <>
-    <ComA />
+    <Axios />
     </>
   )
  }
-
  export default App;
-
- //initilo
