@@ -9,7 +9,7 @@ function Axios(){
 
     return(
         <>
-        { num &&<h1>You clicked this {num}</h1>}
+        <h1>You clicked this {num} lucky number</h1>
         <select value={num} onChange = {(event)=>{
                 setNum(event.target.value)
         }}>
