@@ -797,12 +797,23 @@
  //rest api axios api
 
 
-import Axios from "./components/Axios";
- function App(){
+// import Axios from "./components/Axios";
+//  function App(){
+//   return(
+//     <>
+//     <Axios />
+//     </>
+//   )
+//  }
+//  export default App;
+
+
+function App(){
   return(
     <>
-    <Axios />
+    <h1>Hello router </h1>
     </>
   )
- }
- export default App;
+}
+
+export default App;
